@@ -91,7 +91,7 @@ class GaussianBlur (Filter):
         self.ker_sz = ker_sz_
         
     def apply (self, img):
-        return cv2.GaussianBlur (img, (ker_sz, kre_sz), 0)
+        return cv2.GaussianBlur (img, (self.ker_sz, self.ker_sz), 0)
 
 class crop (Filter):
     def __init__ (self, x1 = 0, y1 = 0, x2 = 100, y2 = 100):
